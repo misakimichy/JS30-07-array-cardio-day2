@@ -34,6 +34,9 @@ const people = [
   // Array.prototype.find()
   // Find is like filter, but instead returns just the one you are looking for
   // Find the comment with the ID of 823423
+  const findComment = comments.find(comment => comment.id === 823423);
+
+  console.log({findComment});
 
   // Array.prototype.findIndex()
   // Find the comment with this ID
