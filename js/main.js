@@ -15,15 +15,21 @@ const people = [
   // Some and Every Checks
   // Array.prototype.some()
   // is at least one person 19 or older?
-  const someIsAdult = people.some(person => {
+  const isAdult = people.some(person => {
     const currentYear = (new Date()) .getFullYear();
-    if(currentYear - person.year > 19) return true;
+    return currentYear - person.year >= 19;
   });
 
-  console.log(someIsAdult);
+  console.log({isAdult});
 
   // Array.prototype.every()
   // is everyone 19 or older?
+  const allAdult = people.every(person => {
+    const currentYear = (new Date()) .getFullYear();
+    return currentYear - person.year >= 19;
+  });
+
+  console.log({allAdult});
 
   // Array.prototype.find()
   // Find is like filter, but instead returns just the one you are looking for
